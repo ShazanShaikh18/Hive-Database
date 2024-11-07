@@ -37,11 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
             reverse: true,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return SizedBox(
-                height: 100,
-                child: IntrinsicHeight(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 8),
+                child: SizedBox(
+                  height: 100,
+                  child: IntrinsicHeight(
                     child: Card(
                       elevation: 5,
                       child: Padding(
@@ -60,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     delete(data[index]);
                                   },
                                   child: const Icon(Icons.delete, color: Colors.red,)),
-                                
                                 const SizedBox(
                                   width: 15,
                                 ),
@@ -69,10 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     _editDialog(data[index], data[index].title, data[index].description);
                                   },
                                   child: const Icon(Icons.edit)),
-                                
                               ],
-                            ),
-                            
+                            ),                            
                             Expanded(child: Text(data[index].description.toString(), style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
                               maxLines: null,)),
                           ],
