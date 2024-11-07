@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hive/hive.dart';
@@ -69,9 +70,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                   },
                                   child: const Icon(Icons.edit)),
                               ],
-                            ),                            
-                            Expanded(child: Text(data[index].description.toString(), style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
-                              maxLines: null,)),
+                            ),  
+
+                            Expanded(child: AutoSizeText(data[index].description.toString(),
+                              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
+                                maxLines: 5,
+                                minFontSize: 14,
+                                maxFontSize: 30,
+                                overflow: TextOverflow.ellipsis,
+                              )),
                           ],
                         ),
                       ),

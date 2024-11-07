@@ -38,6 +38,7 @@ dependencies:
   hive: ^2.0.0
   hive_flutter: ^1.0.0
   path_provider: ^2.1.0
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   hive_generator: ^1.0.0  # @HiveType(typeId: 0) = Model ke saath sync hojata he or required code automatic generate kardeta he
